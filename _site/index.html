@@ -45,72 +45,172 @@
         </ul>
 
         <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="about">
-          <section class="row">
-            <div class="col-md-8">
-              <div class="photo">
-                <!-- <img src="https://secure.gravatar.com/avatar/5faa2246af6752e16f2d9cac42437f60?s=200"> -->
-                <img src="https://secure.gravatar.com/avatar/?s=200">
+          <!-- About Me -->
+          <div role="tabpanel" class="tab-pane active" id="about">
+            <section class="row">
+              <div class="col-md-8">
+                <div class="photo">
+                  <!-- <img src="https://secure.gravatar.com/avatar/5faa2246af6752e16f2d9cac42437f60?s=200"> -->
+                  <img src="https://secure.gravatar.com/avatar/?s=200">
+                </div>
+                <div class="info">
+                  <h1>Gene Bang</h1>
+                  <h2>Web Developer</h2> 
+                  <p>I am a web developer with work experience from a small startup and instruction from Dev Bootcamp, a 10-week immersive web development course. I am looking to continue my growth as a developer in all areas of web development while getting the chance to work with and learn from other developers.</p>         
+                </div>
+              <div class="clearfix"></div>
               </div>
-              <div class="info">
-                <h1>Gene Bang</h1>
-                <h2>Web Developer</h2> 
-                <p>something here</p>         
+              <div class="col-md-4">
+                <div class="side-links">
+                  <ul id="myTabs">
+                    <li> <a href="#resume" aria-controls="resume" role="tab" data-toggle="tab" id="resume-side">View My Resume</a> </li>
+                    <li> <a href="#portfolio" aria-controls="portfolio" role="tab" data-toggle="tab" id="portfolio-side">My Portfolio</a> </li>
+                    <li> <a href="#contact" aria-controls="contact" role="tab" data-toggle="tab" id="contact-side">Contact Me</a> </li>
+                    <li> <a href="https://genebang.wordpress.com/recent-work/" target="_blank">Game Design Work (WordPress)</a> </li>
+                  </ul>
+                </div>
               </div>
-            <div class="clearfix"></div>
-            </div>
-            <div class="col-md-4">
-              <div class="side-links">
-                <ul id="myTabs">
-                  <li> <a href="#resume" aria-controls="resume" role="tab" data-toggle="tab" id="resume-side">View My Resume</a> </li>
-                  <li> <a href="#portfolio" aria-controls="portfolio" role="tab" data-toggle="tab" id="portfolio-side">My Portfolio</a> </li>
-                  <li> <a href="#contact" aria-controls="contact" role="tab" data-toggle="tab" id="contact-side">Contact Me</a> </li>
-                  <li> <a href="https://genebang.wordpress.com/recent-work/" target="_blank">Game Design Work (WordPress)</a> </li>
-                </ul>
-              </div>
-            </div>
 
-            <div class="clearfix"></div>
+              <div class="clearfix"></div>
 
-            <div class="col-md-4">
-              <div class="item-box">
-                <div class="photo">
-                  <img class="icon" src="/assets/images/email-icon.png">
+              <div class="col-md-4">
+                <div class="item-box">
+                  <div class="photo">
+                    <img class="icon" src="/assets/images/email-icon.png">
+                  </div>
+                  <h4>
+                    <a href="mailto:genebang@gmail.com">genebang@gmail.com</a>
+                  </h4>
+                  <p>Email Address</p>
                 </div>
-                <h4>
-                  <a href="mailto:genebang@gmail.com">genebang@gmail.com</a>
-                </h4>
-                <p>Email Address</p>
               </div>
-            </div>
-            <div class="col-md-4">
-              <div class="item-box">
-                <div class="photo">
-                  <img class="icon" src="/assets/images/linkedin-icon.png">
+              <div class="col-md-4">
+                <div class="item-box">
+                  <div class="photo">
+                    <img class="icon" src="/assets/images/linkedin-icon.png">
+                  </div>
+                  <h4>
+                    <a href="http://www.linkedin.com/in/genebang" target="_blank">Gene Bang</a>
+                  </h4>
+                  <p>LinkedIn Profile</p>
                 </div>
-                <h4>
-                  <a href="http://www.linkedin.com/in/genebang" target="_blank">Gene Bang</a>
-                </h4>
-                <p>LinkedIn Profile</p>
               </div>
-            </div>
-            <div class="col-md-4">
-              <div class="item-box">
-                <div class="photo">
-                  <img class="icon" src="/assets/images/github-icon.png">
+              <div class="col-md-4">
+                <div class="item-box">
+                  <div class="photo">
+                    <img class="icon" src="/assets/images/github-icon.png">
+                  </div>
+                  <h4>
+                    <a href="http://www.github.com/genebang" target="_blank">genebang</a>
+                  </h4>
+                  <p>GitHub</p>
                 </div>
-                <h4>
-                  <a href="http://www.github.com/genebang" target="_blank">genebang</a>
-                </h4>
-                <p>GitHub</p>
               </div>
-            </div>
-          </section>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="resume">two</div>
-        <div role="tabpanel" class="tab-pane" id="portfolio">three</div>
-        <div role="tabpanel" class="tab-pane" id="contact">four</div>
+            </section>
+          </div>
+
+          <!-- Resume -->
+          <div role="tabpanel" class="tab-pane" id="resume">
+            <section class="row">
+              <div class="col-md-8">
+                <div class="info">
+                  <h2>Work Experience</h2>
+                  <ul>
+                    <li class="work">
+                      <h3>Game Designer</h3>
+                      <h4>Redacted Studios</h4>
+                      <span class="label label-info">Aug - Oct '14</span>
+                      <span class="label label-info">May - Oct '12</span>
+                      <p>Designed and implemented gameplay for product demonstrations and original IP concepts. Prototyped game systems with the internal game engine and toolset to test feasibility of concepts for future games.</p>
+                    </li>
+                    <li class="work">
+                      <h3>Software Engineer</h3>
+                      <h4>Chefs Feed</h4>
+                      <span class="label label-info">Jan '13 - Jul '14</span>
+                      <p>Designed, developed and maintained web apps for internal use. Tools included a newsletter editor to publish a weekly newsletter and an analytics dashboard to pull and visualize data from different sources.</p>
+                    </li>
+                    <li class="work">
+                      <h3>Level Designer / Game Designer</h3>
+                      <h4>Namco Bandai Games</h4>
+                      <span class="label label-info">Sep '07 - Mar '12</span>
+                      <p>Documented and implemented compelling interactive gameplay for console games on Xbox and PS3. Collaborated with engineering and art teams to complete design tasks. Evaluated new game engines and build prototypes as proof of concept for gaming systems.</p>
+                    </li>
+                  </ul>
+                  <br>
+                  <br>
+                  <h2>Education</h2>
+                  <ul>
+                    <li class="work">
+                      <h3>Dev Bootcamp</h3>
+                      <h4>San Francisco</h4>
+                      <span class="label label-info">Oct - Dec '12</span>
+                      <p>Spent 10 weeks learning to be a web developer using the Ruby on Rails framework. Also gained experience with other languages web technologies, including JavaScript, jQuery, SQL and HTML/CSS.</p>
+                    </li>
+                    <li class="work">
+                      <h3>University of California, Los Angeles</h3>
+                      <h4>BS, Computer Science</h4>
+                      <span class="label label-info">1996 - 2000</span>
+                      <p></p>
+                    </li>
+                  </ul>                  
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="skills">
+                  <h2>Skills</h2>
+                  <h3>Programming Languages</h3>
+
+                  <ul>
+                    <li>
+                      Ruby
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      Ruby on Rails
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-danger  progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      HTML/CSS
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      jQuery/JavaScript
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Portfolio -->
+          <div role="tabpanel" class="tab-pane" id="portfolio">
+            <section class="row">
+            </section>
+          </div>
+
+          <!-- Contact -->
+          <div role="tabpanel" class="tab-pane" id="contact">
+            <section class="row">
+            </section>
+          </div>
+
       </div>
+      <footer>
+      </footer>
     </div>
 
     <script>
