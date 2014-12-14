@@ -219,3 +219,82 @@ ul:before {
 footer {
   height: 40px;
 }
+
+
+/*portfolio*/
+
+.preview {
+  height: auto;
+  width: 100%;
+  float:right;
+}
+
+.item-box.portfolio {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.item-box.portfolio .text {
+  float: left;
+  margin-top:12px;
+  height: 60px;
+  padding: 0 10px;
+}
+
+.portfolio .photo {
+  margin: 0;
+}
+
+.portfolio p {
+  line-height: 1.2;
+}
+
+.tab-pane#portfolio {
+  padding-bottom: 0px;
+}
+
+.modal-body img {
+  height: auto;
+  max-width: 100%;
+  max-height: 600px;
+  display:block;
+  margin: auto;
+}
+
+.slideshow {
+  width: 84%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.arrow {
+  width: 8%;
+  cursor: hand; 
+  text-align: center;
+}
+.arrow:hover {
+  background-color: #eee;
+}
+
+.frame {
+  float: left;
+}
+
+.glyphicon {
+  margin: 10px;
+  font-size: 32px;
+}
+
+.slide p {
+  padding: 10px;
+  border: solid 1px #ccc;
+  font-size: 14px;
+}
+
+.disabled:hover {
+  background-color: white;
+}
+.disabled {
+  color: #ccc;
+  cursor: auto;
+}

@@ -12,6 +12,7 @@ title: Gene Bang's github.io page
     <link rel="stylesheet" type="text/css" href="/assets/css/custom.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="/bootstrap/js/bootstrap.js"></script>
+    <script src="/assets/js/slideshow.js"></script>
   </head>
 
   <body>
@@ -203,16 +204,282 @@ title: Gene Bang's github.io page
           <!-- Portfolio -->
           <div role="tabpanel" class="tab-pane" id="portfolio">
             <section class="row">
+              <div class="col-md-4">
+                <div class="item-box portfolio">
+                  <div class="photo">
+                    <a href="#" data-toggle="modal" data-target="#newsletter-modal">
+                      <img class="preview" src="https://googledrive.com/host/0B49W1igDfzoNZnZIUEZQVjZOUms/email_preview.png">
+                    </a>
+                  </div>
+                  <div class="text">
+                    <h4>
+                      <a href="#" data-toggle="modal" data-target="#newsletter-modal">Newsletter Editor</a>
+                    </h4>
+                    <p>Newsletter editor used by content team to create weekly newsletters for users.</p>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="item-box portfolio">
+                  <div class="photo">
+                    <a href="#" data-toggle="modal" data-target="#metrics-modal">
+                      <img class="preview" src="https://googledrive.com/host/0B49W1igDfzoNZnZIUEZQVjZOUms/metrics_preview.png">
+                    </a>
+                  </div>
+                  <div class="text">
+                    <h4>
+                      <a href="#" data-toggle="modal" data-target="#metrics-modal">Metrics Dashboard</a>
+                    </h4>
+                    <p>Web app to pull data from multiple sources to have a central location to visually view data.</p>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="item-box portfolio">
+                  <div class="photo">
+                    <a href="#" data-toggle="modal" data-target="#share-modal">
+                      <img class="preview" src="https://googledrive.com/host/0B49W1igDfzoNZnZIUEZQVjZOUms/share_preview.png">
+                    </a>
+                  </div>
+                  <div class="text">
+                    <h4>
+                      <a href="#" data-toggle="modal" data-target="#share-modal">Share Page</a>
+                    </h4>
+                    <p>Users could share a page that showed any activity created in the app.</p>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="item-box portfolio">
+                  <div class="photo">
+                    <a href="#" data-toggle="modal" data-target="#ideas-modal">
+                      <img class="preview" src="https://googledrive.com/host/0B49W1igDfzoNZnZIUEZQVjZOUms/ideas_preview.png">
+                    </a>
+                  </div>
+                  <div class="text">
+                    <h4>
+                      <a href="#" data-toggle="modal" data-target="#ideas-modal">Ideas Page</a>
+                    </h4>
+                    <p>A place for users to share ideas and get feedback through comments and votes.</p>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+
+              <!-- Modals -->
+              <div class="modal fade" id="newsletter-modal" tabindex="-1" role="dialog" aria-labelledby="newsletter-modalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Newsletter Editor</h4>
+                    </div>
+
+                    <div class="modal-body">
+                      <div class="frame arrow left">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                      </div>
+                      <div class="frame slideshow email">
+                        <div class="slide">
+                          <img src="https://googledrive.com/host/0B49W1igDfzoNZnZIUEZQVjZOUms/email_0.png">
+                          <p>Newsletter Editor (1/6)- View of the editor with live updates of the newsletter as data is entered (v1 template)</p>
+                        </div>
+                        <div class="slide">
+                          <img src="https://googledrive.com/host/0B49W1igDfzoNZnZIUEZQVjZOUms/email_1.png">
+                          <p>Newsletter Editor (2/6)- Finished email output (v1 template)</p>
+                        </div>
+                        <div class="slide">
+                          <img src="https://googledrive.com/host/0B49W1igDfzoNZnZIUEZQVjZOUms/email_2.png">
+                          <p>Newsletter Editor (3/6)- Finished email output (v2 template)</p>
+                        </div>
+                        <div class="slide">
+                          <img src="https://googledrive.com/host/0B49W1igDfzoNZnZIUEZQVjZOUms/email_3.png">
+                          <p>Newsletter Editor (4/6)- Finished email output (v3 template)</p>
+                        </div>
+                        <div class="slide">
+                          <img src="https://googledrive.com/host/0B49W1igDfzoNZnZIUEZQVjZOUms/email_4.png">
+                          <p>Newsletter Editor (5/6)- Finished responsive email output, desktop view (v4 template)</p>
+                        </div>
+                        <div class="slide">
+                          <img src="https://googledrive.com/host/0B49W1igDfzoNZnZIUEZQVjZOUms/email_5.png">
+                          <p>Newsletter Editor (6/6)- Finished responsive email output, moblie view (v template)</p>
+                        </div>
+                      </div>
+                      <div class="frame arrow right">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="modal fade" id="metrics-modal" tabindex="-1" role="dialog" aria-labelledby="metrics-modalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Metrics Dashboard</h4>
+                    </div>
+
+                    <div class="modal-body">
+                      <div class="frame arrow left">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                      </div>
+                      <div class="frame slideshow metrics">
+                        <div class="slide">
+                          <img src="https://googledrive.com/host/0B49W1igDfzoNZnZIUEZQVjZOUms/metrics_1.png">
+                          <p>Metrics (1/3) - YouTube Analytics data pulled from YouTube Analytics and visualized with tables and graphs using Highcharts.js</p>
+                        </div>
+                        <div class="slide">
+                          <img src="https://googledrive.com/host/0B49W1igDfzoNZnZIUEZQVjZOUms/metrics_2.png">
+                          <p>Metrics (2/3) - Visualization of other YouTube channel views and subscribers. Data was scrapted from VidStatsx</p>
+                        </div>
+                        <div class="slide">
+                          <img src="https://googledrive.com/host/0B49W1igDfzoNZnZIUEZQVjZOUms/metrics_3.png">
+                          <p>Metrics (3/3) - Index view of stats from YouTube Analytics for individual videos</p>
+                        </div>
+                      </div>
+                      <div class="frame arrow right">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="modal fade" id="share-modal" tabindex="-1" role="dialog" aria-labelledby="share-modalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Share Page</h4>
+                    </div>
+
+                    <div class="modal-body">
+                      <div class="frame arrow left disabled">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                      </div>
+                      <div class="frame slideshow share">
+                        <div class="slide">
+                          <img src="https://googledrive.com/host/0B49W1igDfzoNZnZIUEZQVjZOUms/share_1.png">
+                          <p>Share (1/1) - Share page to display an event created in the app.</p>
+                        </div>
+                      </div>
+                      <div class="frame arrow right disabled">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="modal fade" id="ideas-modal" tabindex="-1" role="dialog" aria-labelledby="ideas-modalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Ideas</h4>
+                    </div>
+
+                    <div class="modal-body">
+                      <div class="frame arrow left">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                      </div>
+                      <div class="frame slideshow ideas">
+                        <div class="slide">
+                          <img src="https://googledrive.com/host/0B49W1igDfzoNZnZIUEZQVjZOUms/ideas_1.png">
+                          <p>Ideas (1/2) - Ideas index page with a quick add and search feature without leaving the page</p>
+                        </div>
+                        <div class="slide">
+                          <img src="https://googledrive.com/host/0B49W1igDfzoNZnZIUEZQVjZOUms/ideas_2.png">
+                          <p>Ideas (2/2) - Idea show page where a user edit any content or attachment and any other user can comment or vote</p>
+                        </div>
+                      </div>
+                      <div class="frame arrow right">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
             </section>
           </div>
 
           <!-- Contact -->
           <div role="tabpanel" class="tab-pane" id="contact">
             <section class="row">
+              <h1>Gene Bang</h1>
+              <h2>Web Developer</h2>
+              <div class="col-md-4">
+                <div class="item-box">
+                  <div class="photo">
+                    <img class="icon" src="/assets/images/email-icon.png">
+                  </div>
+                  <h4>
+                    <a href="mailto:genebang@gmail.com">genebang@gmail.com</a>
+                  </h4>
+                  <p>Email Address</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="item-box">
+                  <div class="photo">
+                    <img class="icon" src="/assets/images/linkedin-icon.png">
+                  </div>
+                  <h4>
+                    <a href="http://www.linkedin.com/in/genebang" target="_blank">Gene Bang</a>
+                  </h4>
+                  <p>LinkedIn Profile</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="item-box">
+                  <div class="photo">
+                    <img class="icon" src="/assets/images/github-icon.png">
+                  </div>
+                  <h4>
+                    <a href="http://www.github.com/genebang" target="_blank">genebang</a>
+                  </h4>
+                  <p>GitHub</p>
+                </div>
+              </div>
             </section>
           </div>
 
       </div>
+
+
       <footer>
       </footer>
     </div>
@@ -241,3 +508,8 @@ title: Gene Bang's github.io page
     </script>
   </body>
 </html>
+
+<!-- https://googledrive.com/host/0B49W1igDfzoNZnZIUEZQVjZOUms/metrics_preview.png -->
+<!-- https://googledrive.com/host/0B49W1igDfzoNZnZIUEZQVjZOUms/ideas_preview.png -->
+<!-- https://googledrive.com/host/0B49W1igDfzoNZnZIUEZQVjZOUms/email_preview.png -->
+
