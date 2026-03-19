@@ -1,2 +1,5 @@
 sass:
   syntax: sass
+
+exclude:
+  - react-src/

@@ -1,1 +1,5 @@
 *.slim
+react-src/node_modules/
+react-src/dist/
+.DS_Store
+*.jpg
