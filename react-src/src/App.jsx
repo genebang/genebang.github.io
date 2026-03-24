@@ -34,41 +34,60 @@ const GAMES = [
     title: 'MONOPOLY GO!',
     image: monopolyGo,
     tags: ['Mobile', 'Social Features', 'Prototyping'],
-    description: `Live-service mobile board game by Scopely. As Principal Game Designer, I owned the design of multiplayer social features from concept through release — including a Battleship-inspired minigame built to expand social engagement between players.
-
-I authored the full feature spec and documentation, collaborated with UX and Art to align aesthetics with the game's visual language, and prototyped a new social mini-game while driving targeted improvements to an existing one. All work was grounded in specific engagement KPIs and close collaboration with product and engineering.`,
+    youtubeIds: ['cwfoZy3mNTI', 'KWUeSqGtlBw'],
+    paragraphs: [
+      "MONOPOLY GO! is a live-service mobile board game developed by Scopely. As Principal Game Designer, I joined the title focused on expanding its social experience — designing multiplayer features from concept through release.",
+      "My primary project was a Battleship-inspired multiplayer minigame built to deepen social engagement between players. I authored the full feature spec and documentation, and collaborated closely with UX and Art to ensure the feature's aesthetics aligned with the game's visual language.",
+      "On MONOPOLY GO!, I was the Principal Game Designer. My responsibilities included:",
+    ],
+    bullets: [
+      "Designed MONOPOLY GO!'s multiplayer Battleship minigame to expand social engagement; authored full feature spec and documentation",
+      "Collaborated with UX and Art to align feature aesthetics with the game's visual language",
+      "Prototyped a new social mini-game and drove improvements to an existing one, targeting specific engagement KPIs",
+    ],
   },
   {
     id: 'solitaire-tripeaks',
     title: 'Solitaire TriPeaks',
     image: tripeaks,
     tags: ['Mobile', 'Unity', 'Feature Design', 'Systems Design', 'Social Features', 'Level Design', 'Economy Balancing', 'Live Events'],
-    description: `Solitaire TriPeaks is a live-service mobile card game by GSN Games (later acquired by Scopely). I spent seven years on the title, growing from Game Designer to Lead Game Designer.
-
-As Lead, I designed and managed weekly club events — handling testing and rollout — to sustain player retention, and led the level and world creation pipeline. I built internal systems for level tuning and economy balancing, and owned features end-to-end including Roko's Powerups and Club Race.
-
-Earlier in my tenure, I created level and world content with the art team in Unity and used analytics to drive measurable improvements in login rates, coin sharing, and level progression.`,
+    youtubeIds: ['8drpdBQeG6U'],
+    paragraphs: [
+      "Solitaire TriPeaks is a live-service mobile card game by GSN Games (later acquired by Scopely). I spent seven years on the title, growing from Game Designer to Lead Game Designer.",
+      "As Lead, I designed and managed weekly club events — handling testing and rollout — to sustain player retention, and led the level and world creation pipeline. I built internal systems for level tuning and economy balancing, and owned features end-to-end including Roko's Powerups and Club Race.",
+      "Earlier in my tenure, I created level and world content with the art team in Unity and used analytics to drive measurable improvements in login rates, coin sharing, and level progression.",
+    ],
   },
   {
     id: 'gsn-grand-casino',
-    title: 'GSN Grand Casino',
+    title: 'Grand Casino',
     image: gsnGrandCasino,
     tags: ['Mobile', 'Feature Design', 'Systems Design'],
-    description: `Details coming soon.`,
+    youtubeIds: ['MzlCv5OCzcs'],
+    paragraphs: [
+      "Grand Casino is a live-service mobile casino game by GSN Games (later acquired by Scopely). I designed a tiered leaderboard system."
+    ],
   },
   {
     id: 'splatterhouse',
     title: 'Splatterhouse',
     image: splatterhouse,
     tags: ['Xbox 360', 'PS3', 'Combat Design', 'Level Design'],
-    description: `Details coming soon.`,
+    youtubeIds: ['Vi7Iai7pYd8'],
+    paragraphs: [
+      "Splatterhouse is a horror-themed beat 'em up hack and slash game developed and published by Namco Bandai Games in 2010 for PS3 and Xbox 360. It is a reboot of the original Splatterhouse which was released in 1988."
+    ],
   },
   {
     id: 'afro-samurai',
     title: 'Afro Samurai',
     image: afroSamurai,
     tags: ['Xbox 360', 'PS3', 'Level Design'],
-    description: `Details coming soon.`,
+    youtubeIds: ['vSow1VnMPko'],
+    paragraphs: [
+      "Afro Samurai is an action game developed and published by Namco Bandai Games in 2009 for PS3 and Xbox 360, based on the manga and anime series of the same name.",
+      "In my first design role I initally tested an verified design tools since the internal game engine was being developed as we build the game. This was followed by level blockouts in Maya."
+    ],
   },
 ]
 
@@ -195,8 +214,9 @@ export default function App() {
             <div className="w-16" />
           </nav>
         </header>
-        <div className="max-w-3xl mx-auto px-8 sm:px-12 py-32">
-          <div className="flex gap-6 items-center mb-10">
+        <div className="max-w-7xl mx-auto px-8 sm:px-12 md:px-24 py-32">
+          {/* Game title + tags */}
+          <div className="flex gap-6 items-center mb-12">
             <img src={selectedGame.image} alt={selectedGame.title} className={`w-24 h-24 rounded-2xl flex-shrink-0 ${selectedGame.objectFit === 'contain' ? 'object-contain' : 'object-cover'}`} />
             <div>
               <h1 className="text-3xl font-bold text-gray-800">{selectedGame.title}</h1>
@@ -207,11 +227,49 @@ export default function App() {
               </div>
             </div>
           </div>
-          <div className="prose prose-gray max-w-none">
-            {selectedGame.description.split('\n\n').map((para, i) => (
-              <p key={i} className="text-gray-600 leading-relaxed mb-4">{para}</p>
-            ))}
-          </div>
+
+          {/* Two-column body */}
+          {selectedGame.paragraphs ? (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+              {/* Left: text */}
+              <div>
+                {selectedGame.subtitle && (
+                  <p className="font-bold text-gray-800 mb-4">{selectedGame.subtitle}</p>
+                )}
+                {selectedGame.paragraphs.map((para, i) => (
+                  <p key={i} className="text-gray-600 leading-relaxed mb-4">{para}</p>
+                ))}
+                {selectedGame.bullets && (
+                  <ul className="mt-2 space-y-2">
+                    {selectedGame.bullets.map((bullet, i) => (
+                      <li key={i} className="flex gap-2 text-gray-600 leading-relaxed">
+                        <span className="mt-1.5 flex-shrink-0">•</span>
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+              {/* Right: videos */}
+              {selectedGame.youtubeIds?.length > 0 && (
+                <div className="space-y-6">
+                  {selectedGame.youtubeIds.map((id) => (
+                    <div key={id} className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                      <iframe
+                        className="absolute inset-0 w-full h-full rounded-xl"
+                        src={`https://www.youtube.com/embed/${id}`}
+                        title={`${selectedGame.title} video`}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ) : (
+            <p className="text-gray-500 italic">Details coming soon.</p>
+          )}
         </div>
       </div>
     )
@@ -302,7 +360,7 @@ export default function App() {
             <a href="https://linkedin.com/in/genebang" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition-colors" aria-label="LinkedIn">
               <LinkedInIcon />
             </a>
-            <a href="https://github.com/genebang" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition-colors" aria-label="GitHub">
+            <a href="https://github.com/genebang" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition-colors" aria-label="GitHub"> 
               <GitHubIcon />
             </a>
           </div>
@@ -318,7 +376,7 @@ export default function App() {
             </div>
             <div className="lg:col-span-8">
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                Game designer specializing in live-service mobile games, with deep experience in social features, engagement systems, and economy design. Over the past decade at GSN Games/Scopely, I've grown from designing levels and content to owning full features end-to-end on titles like MONOPOLY GO! and Solitaire TriPeaks — working closely with product, UX, and engineering to take ideas from concept to release.
+                I'm an experienced game designer with 20+ years in the industry with the last 10+ years in live-service mobile games, with experience in social features, engagement systems, and economy design. Over the past decade at GSN Games/Scopely, I've grown from designing levels and content to owning full features end-to-end on titles like MONOPOLY GO! and Solitaire TriPeaks — working closely with product, UX, and engineering to take ideas from concept to release.
               </p>
             </div>
           </div>
@@ -337,8 +395,13 @@ export default function App() {
                 <button
                   key={game.id}
                   onClick={() => setSelectedGame(game)}
-                  className="w-full text-left p-6 md:p-8 bg-white rounded-2xl border border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer"
+                  className="group w-full text-left p-6 md:p-8 bg-white rounded-2xl border border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer relative"
                 >
+                  <div className="absolute top-4 right-4 w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 group-hover:border-blue-700 group-hover:text-blue-700 transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                      <path d="M7 17L17 7M17 7H7M17 7v10"/>
+                    </svg>
+                  </div>
                   <div className="flex gap-6 items-center">
                     <img src={game.image} alt={game.title} className={`w-40 h-40 rounded-2xl flex-shrink-0 ${game.objectFit === 'contain' ? 'object-contain' : 'object-cover'}`} />
                     <div>
