@@ -1,9 +1,16 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import monopolyGo from './assets/monopoly-go.png'
 import tripeaks from './assets/tripeaks.png'
 import gsnGrandCasino from './assets/gsn-grand-casino.png'
 import splatterhouse from './assets/splatterhouse.png'
 import afroSamurai from './assets/afro-samurai.png'
+import grand01 from './assets/grand-casino/grand01.png'
+import grand02 from './assets/grand-casino/grand02.png'
+import grand03 from './assets/grand-casino/grand03.png'
+import grand04 from './assets/grand-casino/grand04.png'
+import tripeaks01 from './assets/tripeaks/tripeaks01-login.png'
+import tripeaks02 from './assets/tripeaks/tripeaks02-race.png'
+import tripeaks03 from './assets/tripeaks/tripeaks03-roko.png'
 
 const ACCENT = '#1d4ed8'
 
@@ -52,6 +59,7 @@ const GAMES = [
     image: tripeaks,
     tags: ['Mobile', 'Unity', 'Feature Design', 'Systems Design', 'Social Features', 'Level Design', 'Economy Balancing', 'Live Events'],
     youtubeIds: ['8drpdBQeG6U'],
+    gallery: [tripeaks01, tripeaks02, tripeaks03],
     paragraphs: [
       "Solitaire TriPeaks is a live-service mobile card game by GSN Games (later acquired by Scopely). I spent seven years on the title, growing from Game Designer to Lead Game Designer.",
       "As Lead, I designed and managed weekly club events — handling testing and rollout — to sustain player retention, and led the level and world creation pipeline. I built internal systems for level tuning and economy balancing, and owned features end-to-end including Roko's Powerups and Club Race.",
@@ -65,8 +73,9 @@ const GAMES = [
     tags: ['Mobile', 'Feature Design', 'Systems Design'],
     youtubeIds: ['MzlCv5OCzcs'],
     paragraphs: [
-      "Grand Casino is a live-service mobile casino game by GSN Games (later acquired by Scopely). I designed a tiered leaderboard system."
+      "Grand Casino is a live-service mobile casino game by GSN Games (later acquired by Scopely). I designed a tiered tournament system called Winner's Rush. Player's earnings were used as points to be placed on timed leaderboards. Top ranked players would then advance to play against other top players for larger rewards."
     ],
+    gallery: [grand01, grand02, grand03, grand04],
   },
   {
     id: 'splatterhouse',
@@ -175,6 +184,65 @@ const EXPERIENCE = [
   },
 ]
 
+function Carousel({ images }) {
+  const [index, setIndex] = useState(0)
+  const touchStartX = useRef(null)
+
+  const prev = () => setIndex((i) => (i - 1 + images.length) % images.length)
+  const next = () => setIndex((i) => (i + 1) % images.length)
+
+  const onTouchStart = (e) => { touchStartX.current = e.touches[0].clientX }
+  const onTouchEnd = (e) => {
+    if (touchStartX.current === null) return
+    const diff = touchStartX.current - e.changedTouches[0].clientX
+    if (diff > 40) next()
+    else if (diff < -40) prev()
+    touchStartX.current = null
+  }
+
+  return (
+    <div>
+      <div
+        className="relative w-full overflow-hidden rounded-xl"
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+      >
+        <div className="w-full bg-black rounded-xl" style={{ paddingBottom: '56.25%', position: 'relative' }}>
+          <img
+            src={images[index]}
+            alt={`Screenshot ${index + 1}`}
+            className="absolute inset-0 w-full h-full object-contain rounded-xl"
+          />
+        </div>
+        <button
+          onClick={prev}
+          className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 hover:bg-white shadow flex items-center justify-center transition"
+          aria-label="Previous"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button
+          onClick={next}
+          className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 hover:bg-white shadow flex items-center justify-center transition"
+          aria-label="Next"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+      <div className="flex justify-center gap-2 mt-4">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIndex(i)}
+            className={`w-2 h-2 rounded-full transition-colors ${i === index ? 'bg-gray-700' : 'bg-gray-300'}`}
+            aria-label={`Go to image ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default function App() {
   const [scrolled, setScrolled] = useState(false)
   const [selectedGame, setSelectedGame] = useState(null)
@@ -250,10 +318,10 @@ export default function App() {
                   </ul>
                 )}
               </div>
-              {/* Right: videos */}
-              {selectedGame.youtubeIds?.length > 0 && (
+              {/* Right: videos + gallery */}
+              {(selectedGame.youtubeIds?.length > 0 || selectedGame.gallery?.length > 0) && (
                 <div className="space-y-6">
-                  {selectedGame.youtubeIds.map((id) => (
+                  {selectedGame.youtubeIds?.map((id) => (
                     <div key={id} className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                       <iframe
                         className="absolute inset-0 w-full h-full rounded-xl"
@@ -264,6 +332,9 @@ export default function App() {
                       />
                     </div>
                   ))}
+                  {selectedGame.gallery?.length > 0 && (
+                    <Carousel images={selectedGame.gallery} />
+                  )}
                 </div>
               )}
             </div>
@@ -394,7 +465,7 @@ export default function App() {
               {GAMES.map((game) => (
                 <button
                   key={game.id}
-                  onClick={() => setSelectedGame(game)}
+                  onClick={() => { setSelectedGame(game); window.scrollTo(0, 0) }}
                   className="group w-full text-left p-6 md:p-8 bg-white rounded-2xl border border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer relative"
                 >
                   <div className="absolute top-4 right-4 w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 group-hover:border-blue-700 group-hover:text-blue-700 transition-all duration-300">
