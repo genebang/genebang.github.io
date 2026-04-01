@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Inter', system-ui, sans-serif;
 }
 
 html {
