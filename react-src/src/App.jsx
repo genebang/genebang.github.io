@@ -38,12 +38,23 @@ const GAMES = [
     title: 'MONOPOLY GO!',
     image: monopolyGo,
     tags: ['Mobile', 'Social Features', 'Prototyping'],
-    youtubeIds: ['cwfoZy3mNTI', 'KWUeSqGtlBw'],
-    paragraphs: [
+    youtubeIds: ['cwfoZy3mNTI'],
+    videosBottom: ['KWUeSqGtlBw'],
+    details: [
+      { label: 'Publisher', value: 'Scopely' },
+      { label: 'Skill Focus', value: 'Designing and owning new features to meet stakeholder goals.' },
+      { label: 'Tools', value: 'Unity. Google Docs, Figma, Photoshop, and Confluence for documentation' },
+      { label: 'Time on Project', value: '~1.5 years' },
+    ],
+    links: [
+      { label: 'MONOPOLY GO! App - App Store', url: 'https://apps.apple.com/us/app/monopoly-go/id1621328561' },
+      { label: 'MONOPOLY GO! - Apps on Google Play', url: 'https://play.google.com/store/apps/details?id=com.scopely.monopolygo&hl=en_US' },
+    ],
+    summary: [
       "MONOPOLY GO! is a live-service mobile board game developed by Scopely. As Principal Game Designer, I joined the title focused on expanding its social experience — designing multiplayer features from concept through release.",
       "My primary project was a Battleship-inspired multiplayer minigame built to deepen social engagement between players. I authored the full feature spec and documentation, and collaborated closely with UX and Art to ensure the feature's aesthetics aligned with the game's visual language.",
-      "On MONOPOLY GO!, I was the Principal Game Designer. My responsibilities included:",
     ],
+    paragraphs: [],
     bullets: [
       "Designed MONOPOLY GO!'s multiplayer Battleship minigame to expand social engagement; authored full feature spec and documentation",
       "Collaborated with UX and Art to align feature aesthetics with the game's visual language",
@@ -57,11 +68,22 @@ const GAMES = [
     tags: ['Mobile', 'Unity', 'Feature Design', 'Systems Design', 'Social Features', 'Level Design', 'Economy Balancing', 'Live Events'],
     youtubeIds: ['8drpdBQeG6U'],
     gallery: [tripeaks01, tripeaks02, tripeaks03],
-    paragraphs: [
+    details: [
+      { label: 'Publisher', value: 'GSN Games -> Scopely' },
+      { label: 'Skill Focus', value: 'Feature design, UI & UX, level design' },
+      { label: 'Tools', value: 'Unity. Google Docs and Photoshop for documentation.' },
+      { label: 'Time on Project', value: '~8 years' },
+    ],
+    links: [
+      { label: 'Tiki Solitaire TriPeaks - App Store', url: 'https://apps.apple.com/us/app/tiki-solitaire-tripeaks/id892521917' },
+      { label: 'Tiki Solitaire TriPeaks - Apps on Google Play', url: 'https://play.google.com/store/apps/details?id=com.gsn.android.tripeaks&hl=en_US' },
+    ],
+    summary: [
       "Solitaire TriPeaks is a live-service mobile card game by GSN Games (later acquired by Scopely). I spent seven years on the title, growing from Game Designer to Lead Game Designer.",
       "As Lead, I designed and managed weekly club events — handling testing and rollout — to sustain player retention, and led the level and world creation pipeline. I built internal systems for level tuning and economy balancing, and owned features end-to-end including Roko's Powerups and Club Race.",
       "Earlier in my tenure, I created level and world content with the art team in Unity and used analytics to drive measurable improvements in login rates, coin sharing, and level progression.",
     ],
+    paragraphs: [],
   },
   {
     id: 'gsn-grand-casino',
@@ -69,9 +91,20 @@ const GAMES = [
     image: gsnGrandCasino,
     tags: ['Mobile', 'Feature Design', 'Systems Design'],
     youtubeIds: ['MzlCv5OCzcs'],
-    paragraphs: [
-      "Grand Casino is a live-service mobile casino game by GSN Games (later acquired by Scopely). I designed a tiered tournament system called Winner's Rush. Player's earnings were used as points to be placed on timed leaderboards. Top ranked players would then advance to play against other top players for larger rewards."
+    details: [
+      { label: 'Publisher', value: 'GSN Games -> Scopely' },
+      { label: 'Skill Focus', value: 'Feature design, UI & UX' },
+      { label: 'Tools', value: 'Unity. Google Docs and Photoshop for documentation.' },
+      { label: 'Time on Project', value: 'on/off ~1 year' },
     ],
+    links: [
+      { label: 'Grand Casino: Slots Games - App Store', url: 'https://apps.apple.com/us/app/grand-casino-slots-games/id891904928' },
+      { label: 'Grand Casino: Slots & Bingo - Apps on Google Play', url: 'https://play.google.com/store/apps/details?id=com.gsn.grandcasino' },
+    ],
+    summary: [
+      "Grand Casino is a live-service mobile casino game by GSN Games (later acquired by Scopely). I designed a tiered tournament system called Winner's Rush. Player's earnings were used as points to be placed on timed leaderboards. Top ranked players would then advance to play against other top players for larger rewards.",
+    ],
+    paragraphs: [],
     gallery: [grand01, grand02, grand03, grand04],
   },
   {
@@ -80,9 +113,17 @@ const GAMES = [
     image: splatterhouse,
     tags: ['Xbox 360', 'PS3', 'Combat Design', 'Level Design'],
     youtubeIds: ['Vi7Iai7pYd8'],
-    paragraphs: [
-      "Splatterhouse is a horror-themed beat 'em up hack and slash game developed and published by Namco Bandai Games in 2010 for PS3 and Xbox 360. It is a reboot of the original Splatterhouse which was released in 1988."
+    details: [
+      { label: 'Publisher', value: 'Namco Bandai Games' },
+      { label: 'Platforms', value: 'Xbox 360 and PS3' },
+      { label: 'Skill Focus', value: 'Combat/level design and scripting.' },
+      { label: 'Tools', value: 'Gamebryo + internal tools for level and combat scripting.' },
+      { label: 'Time on Project', value: '~1 year' },
     ],
+    summary: [
+      "Splatterhouse is a horror-themed beat 'em up hack and slash game developed and published by Namco Bandai Games in 2010 for PS3 and Xbox 360. It is a reboot of the original Splatterhouse which was released in 1988.",
+    ],
+    paragraphs: [],
   },
   {
     id: 'afro-samurai',
@@ -90,10 +131,18 @@ const GAMES = [
     image: afroSamurai,
     tags: ['Xbox 360', 'PS3', 'Level Design'],
     youtubeIds: ['vSow1VnMPko'],
-    paragraphs: [
-      "Afro Samurai is an action game developed and published by Namco Bandai Games in 2009 for PS3 and Xbox 360, based on the manga and anime series of the same name.",
-      "In my first design role I initally tested an verified design tools since the internal game engine was being developed as we build the game. This was followed by level blockouts in Maya."
+    details: [
+      { label: 'Publisher', value: 'Namco Bandai Games' },
+      { label: 'Platforms', value: 'Xbox 360 and PS3' },
+      { label: 'Skill Focus', value: 'Level design and scripting' },
+      { label: 'Tools', value: 'Maya for level blockouts. Maya + internal tools for level scripting.' },
+      { label: 'Time on Project', value: '~2 years' },
     ],
+    summary: [
+      "Afro Samurai is an action game developed and published by Namco Bandai Games in 2009 for PS3 and Xbox 360, based on the manga and anime series of the same name.",
+      "In my first design role I initially tested and verified design tools since the internal game engine was being developed as we built the game. This was followed by level blockouts in Maya.",
+    ],
+    paragraphs: [],
   },
 ]
 
@@ -266,7 +315,7 @@ export default function App() {
         <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm">
           <nav className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
             <button
-              onClick={() => { setSelectedGame(null); setTimeout(() => { document.getElementById('games')?.scrollIntoView({ behavior: 'smooth' }) }, 50) }}
+              onClick={() => { setSelectedGame(null); setTimeout(() => { document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }) }, 50) }}
               className="flex items-center gap-2 text-gray-500 hover:text-black transition-colors text-sm font-medium"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
@@ -275,7 +324,7 @@ export default function App() {
               Back
             </button>
             <ul className="hidden md:flex items-center gap-8 justify-center">
-              {['About', 'Games', 'Experience', 'Education'].map((item) => (
+              {['About', 'Projects', 'Experience', 'Education'].map((item) => (
                 <li key={item}>
                   <button
                     onClick={() => { setSelectedGame(null); setTimeout(() => { document.getElementById(item.toLowerCase())?.scrollIntoView({ behavior: 'smooth' }) }, 50) }}
@@ -290,45 +339,17 @@ export default function App() {
           </nav>
         </header>
         <div className="max-w-7xl mx-auto px-8 sm:px-12 md:px-24 py-32">
-          {/* Game title + tags */}
-          <div className="flex gap-6 items-center mb-12">
-            <img src={selectedGame.image} alt={selectedGame.title} className={`w-24 h-24 rounded-2xl flex-shrink-0 ${selectedGame.objectFit === 'contain' ? 'object-contain' : 'object-cover'}`} />
-            <div>
-              <h1 className="text-3xl font-bold text-gray-800">{selectedGame.title}</h1>
-              <div className="flex gap-2 mt-3 flex-wrap">
-                {selectedGame.tags.map((tag) => (
-                  <span key={tag} className="px-2.5 py-1 bg-gray-300 text-gray-700 text-xs font-semibold rounded-md">{tag}</span>
-                ))}
-              </div>
-            </div>
-          </div>
 
-          {/* Two-column body */}
-          {selectedGame.paragraphs ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-              {/* Left: text */}
-              <div>
-                {selectedGame.subtitle && (
-                  <p className="font-bold text-gray-800 mb-4">{selectedGame.subtitle}</p>
-                )}
-                {selectedGame.paragraphs.map((para, i) => (
-                  <p key={i} className="text-gray-600 leading-relaxed mb-4">{para}</p>
-                ))}
-                {selectedGame.bullets && (
-                  <ul className="mt-2 space-y-2">
-                    {selectedGame.bullets.map((bullet, i) => (
-                      <li key={i} className="flex gap-2 text-gray-600 leading-relaxed">
-                        <span className="mt-1.5 flex-shrink-0">•</span>
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-              {/* Right: videos + gallery */}
-              {(selectedGame.youtubeIds?.length > 0 || selectedGame.gallery?.length > 0) && (
+          {/* Title */}
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-10">{selectedGame.title}</h1>
+
+          {/* Two-column: video left, text right */}
+          {(selectedGame.youtubeIds?.length > 0 || selectedGame.paragraphs?.length > 0) && (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start mb-16">
+              {/* Left: videos */}
+              {selectedGame.youtubeIds?.length > 0 && (
                 <div className="space-y-6">
-                  {selectedGame.youtubeIds?.map((id) => (
+                  {selectedGame.youtubeIds.map((id) => (
                     <div key={id} className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                       <iframe
                         className="absolute inset-0 w-full h-full rounded-xl"
@@ -339,15 +360,74 @@ export default function App() {
                       />
                     </div>
                   ))}
-                  {selectedGame.gallery?.length > 0 && (
-                    <Carousel images={selectedGame.gallery} />
-                  )}
                 </div>
               )}
+              {/* Right: details or overview text */}
+              {selectedGame.details ? (
+                <div className="space-y-4">
+                  {selectedGame.details.map(({ label, value }) => (
+                    <p key={label} className="text-gray-600 leading-relaxed">
+                      <span className="italic">{label}:</span> {value}
+                    </p>
+                  ))}
+                  {selectedGame.links?.map(({ label, url }) => (
+                    <a key={url} href={url} target="_blank" rel="noopener noreferrer" className="block text-blue-700 hover:underline leading-relaxed">
+                      {label}
+                    </a>
+                  ))}
+                </div>
+              ) : selectedGame.paragraphs?.length > 0 ? (
+                <div>
+                  {selectedGame.paragraphs.map((para, i) => (
+                    <p key={i} className="text-gray-600 leading-relaxed mb-4">{para}</p>
+                  ))}
+                </div>
+              ) : null}
             </div>
-          ) : (
-            <p className="text-gray-500 italic">Details coming soon.</p>
           )}
+
+          {/* Summary of Responsibilities */}
+          {(selectedGame.summary?.length > 0 || selectedGame.bullets?.length > 0) && (
+            <div className="mb-16">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Summary of Responsibilities</h2>
+              {selectedGame.summary?.map((para, i) => (
+                <p key={i} className="text-gray-600 leading-relaxed mb-4">{para}</p>
+              ))}
+              {selectedGame.bullets?.length > 0 && (
+                <ul className="space-y-3 mt-4">
+                  {selectedGame.bullets.map((bullet, i) => (
+                    <li key={i} className="flex gap-3 text-gray-600 leading-relaxed">
+                      <span className="mt-1.5 flex-shrink-0">•</span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          )}
+
+          {/* Bottom videos */}
+          {selectedGame.videosBottom?.length > 0 && (
+            <div className="space-y-6 mb-16">
+              {selectedGame.videosBottom.map((id) => (
+                <div key={id} className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                  <iframe
+                    className="absolute inset-0 w-full h-full rounded-xl"
+                    src={`https://www.youtube.com/embed/${id}`}
+                    title={`${selectedGame.title} video`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Gallery */}
+          {selectedGame.gallery?.length > 0 && (
+            <Carousel images={selectedGame.gallery} />
+          )}
+
         </div>
       </div>
     )
@@ -366,7 +446,7 @@ export default function App() {
       >
         <nav className="max-w-7xl mx-auto px-8 py-4">
           <ul className="flex items-center gap-8 justify-center">
-            {['About', 'Games', 'Experience', 'Education'].map((item) => (
+            {['About', 'Projects', 'Experience', 'Education'].map((item) => (
               <li key={item}>
                 <a
                   href={`#${item.toLowerCase()}`}
@@ -464,11 +544,11 @@ export default function App() {
       </section>
 
       {/* Games */}
-      <section id="games" className="py-24 bg-white">
+      <section id="projects" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-8 sm:px-12 md:px-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
             <div className="lg:col-span-4">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-800">Games</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-800">Projects</h2>
             </div>
             <div className="lg:col-span-8 space-y-6">
               {GAMES.map((game) => (
@@ -583,7 +663,7 @@ export default function App() {
               </div>
             </div>
             <nav className="flex flex-col gap-2 text-sm text-gray-600">
-              {['About', 'Games', 'Experience', 'Education'].map((item) => (
+              {['About', 'Projects', 'Experience', 'Education'].map((item) => (
                 <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-black transition-colors">
                   {item}
                 </a>
