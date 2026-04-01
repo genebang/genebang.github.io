@@ -137,15 +137,17 @@ const EXPERIENCE = [
         title: 'Lead Game Designer — Solitaire TriPeaks',
         period: 'Mar 2019 – Jan 2022',
         bullets: [
-          "Designed and managed weekly club events (testing and rollout) to sustain player retention; led level/world creation pipeline",
-          "Built internal systems for level tuning and economy balancing; owned Roko's Powerups and Club Race end-to-end",
+          "Gained LiveOps experience designing and managing weekly club events (testing and rollout) to sustain player retention", 
+          "Managed level and world creation pipeline with coordination between the design, art and engineering",
+          "Built internal systems for level tuning and economy balancing",
+          "Owned single player (Leaderboard Tournament updates, Roko's Powerups) and social features (Club Leagues, Club Boat Race) from end-to-end",
         ],
       },
       {
         title: 'Game Designer — Solitaire TriPeaks',
         period: 'Jan 2015 – Mar 2019',
         bullets: [
-          "Created level and world content with the art team in Unity; used analytics to drive improvements in login, coin sharing, and level progression",
+          "Created level and world content with the art team in Unity; used analytics to drive improvements in player return rates, social gifting, and level progression",
         ],
       },
     ],
@@ -170,11 +172,19 @@ const EXPERIENCE = [
     period: 'Jul 2004 – Mar 2012',
     roles: [
       {
-        title: 'Game Designer / QA Lead Tester',
-        period: 'Jul 2004 – Mar 2012',
+        title: 'Game Designer',
+        period: 'Aug 2007 – Mar 2012',
         bullets: [
-          "Advanced from QA Lead (2004–2007) to Game Designer (2007–2012); shipped Afro Samurai and Splatterhouse on Xbox 360 and PS3",
-          "Designed and implemented gameplay systems; created test plans and managed QA teams across Sony, Microsoft, and Nintendo platforms",
+          "Tested and verified game editor tools",
+          "Blocked out levels in Maya, scripted levels using an internal level editor embedded in Maya for Afro Samurai",
+          "Level design and implementation of boss levels that required environmental level scripting for Splatterhouse"
+        ],
+      },
+            {
+        title: 'QA Tester / Lead Tester',
+        period: 'Jul 2004 – Aug 2007',
+        bullets: [
+          "Advanced from QA Tester (2004–2005) to Lead Tester (2005–207), created test plans and managed QA teams across Sony, Microsoft, and Nintendo platforms",
         ],
       },
     ],
@@ -445,7 +455,7 @@ export default function App() {
               </p>
               <div className="flex flex-wrap items-center justify-center mt-8" style={{ gap: '40px' }}>
                 {[logoScopely, logoGSN, logoNamco].map((logo, i) => (
-                  <img key={i} src={logo} alt="" className="object-contain" style={{ maxHeight: '100px' }} />
+                  <img key={i} src={logo} alt="" className="object-contain" style={{ height: '80px' }} />
                 ))}
               </div>
             </div>
